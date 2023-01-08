@@ -5,7 +5,7 @@ Dev Console
 
 > A Salesforce Commerce Cloud (Demandware) Cartridge for Developers.
 
-[![Play Demo Video](https://sfccdevops.s3.amazonaws.com/dc-video-still.png)](https://vimeo.com/476962367/5c830f9227 "Play Demo Video")
+[![Play Demo Video](https://stephenhendricks.me/images/sfcc_dev_console.png)](https://stephenhendricks.me/videos/sfcc_dev_console.mp4 "Play Demo Video")
 
 ## Features
 
