@@ -1,5 +1,3 @@
-![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
-
 Dev Console
 ===
 
