@@ -1,6 +1,7 @@
 <iscontent type="text/html" charset="UTF-8" compact="false"/>
-<isset name="httpHostName" value="${dw.system.Site.getCurrent().httpHostName}" scope="page">
-<isset name="devSideId" value="${dw.system.Site.getCurrent().httpHostName.split('.')[0]}" scope="page">
+<isset name="httpHostName" value="${dw.system.Site.getCurrent().httpHostName}" scope="page"/>
+<isset name="devSideId" value="${dw.system.Site.getCurrent().httpHostName.split('.')[0]}" scope="page"/>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,10 +29,10 @@
 
         <!-- Twitter META Info -->
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:site" content="@sfccdevops">
+        <meta property="twitter:site" content="@z1haze">
         <meta property="twitter:title" content="Console: ${devSideId}">
         <meta property="twitter:description" content="SFCC Developer Console for ${devSideId}">
-        <meta property="twitter:creator" content="@sfccdevops">
+        <meta property="twitter:creator" content="@z1haze">
         <meta property="twitter:image" content="https://${httpHostName}${URLUtils.staticURL('/img/social-card.png')}">
         <meta property="twitter:image:alt" content="Console: ${devSideId}">
         <meta property="twitter:domain" content="${URLUtils.https('Console-Show')}">
@@ -48,30 +49,6 @@
         <!-- Icons -->
         <link rel="shortcut icon" id="favicon" href="${URLUtils.staticURL('/img/favicon.ico')}" type="image/x-icon">
         <link rel="apple-touch-icon" sizes="192x192" href="${URLUtils.staticURL('/img/apple/icon.png')}">
-
-        <!-- Splash Screens -->
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-640x1136.png')}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-750x1334.png')}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-828x1792.png')}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1125x2436.png')}" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1242x2208.png')}" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1242x2688.png')}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1536x2048.png')}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1668x2224.png')}" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-1668x2388.png')}" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/portrait-2048x2732.png')}" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-1136x640.png')}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-1334x750.png')}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-1792x828.png')}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2436x1125.png')}" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2208x1242.png')}" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2688x1242.png')}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2048x1536.png')}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2224x1668.png')}" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2388x1668.png')}" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-        <link rel="apple-touch-startup-image" href="${URLUtils.staticURL('/img/apple/landscape-2732x2048.png')}" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">

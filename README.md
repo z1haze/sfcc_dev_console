@@ -15,6 +15,8 @@ Dev Console
 Installation
 ---
 
+[![Download](https://img.shields.io/badge/Download-blue.svg?logo=github&style=for-the-badge)](https://github.com/z1haze/sfcc_dev_console/releases/latest)
+
 1. Create a new cartridge folder in your codebase called `sfcc_dev_console`. (If you already have a previous version of this cartridge installed, it would be best to delete your existing `sfcc_dev_console` directory and start over).
 2. Copy the `cartridge` folder from this repo into your `sfcc_dev_console` directory and upload the cartridge to your instance.
 3. Add `sfcc_dev_console` to Business Manager Storefront `Cartridges` Path
