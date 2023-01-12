@@ -2,7 +2,7 @@
   "name": "sfcc_dev_console",
   "private": true,
   "version": "2.0.0-alpha",
-  "description": "A cartridge built for SFCC developers",
+  "description": "A Salesforce Commerce Cloud (Demandware) Cartridge for Developers.",
   "type": "module",
   "contributors": [
     {
