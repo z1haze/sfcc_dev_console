@@ -1,0 +1,30 @@
+.editor-actions {
+  .btn {
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: 500;
+    padding: .25rem .75rem;
+
+    @media only screen and (min-width: 768px) {
+      padding: .5rem 1.75rem;
+    }
+  }
+}
+
+.left-pane {
+  .editor-actions {
+    position: relative;
+    padding-left: 62px;
+    height: 90px;
+
+    &:before {
+      content: '';
+      background-color: var(--header-background-color);
+      width: 62px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

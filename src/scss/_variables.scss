@@ -1,0 +1,36 @@
+:root {
+  --header-height: 60px;
+  --text-color: #4f5051;
+  --header-background-color: #f4f4f4;
+
+  // svg icons
+  --icon-fill-color: #ccc;
+  --icon-active-fill-color: #4f5051;
+
+  // buttons
+  --button-background-color: whitesmoke;
+  --button-border-color: #ededed;
+  --button-text-color: #333;
+  --button-hover-text-color: white;
+  --button-hover-background-color: #333;
+
+  // split panes
+  --left-pane-background-color: white;
+  --right-pane-background-color: #fbfafa;
+  --divider-grabber-background-color: #00000026;
+
+  // select dropdowns
+  --select-color: black;
+  --select-option-color: black;
+  --select-option-background-color: transparent;
+
+  // tooltip
+  --tooltip-background-color: black;
+  --tooltip-text-color: white;
+
+  // tabs
+  --tab-border-color: #151515;
+  --tab-color: #4f5051;
+  --tab-new-button-background-color: transparent;
+  --tab-active-color: black;
+}

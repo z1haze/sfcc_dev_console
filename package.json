@@ -1,0 +1,34 @@
+{
+  "name": "sfcc_dev_console",
+  "private": true,
+  "version": "2.0.0-alpha",
+  "description": "A cartridge built for SFCC developers",
+  "type": "module",
+  "contributors": [
+    {
+      "name": "Stephen Hendricks",
+      "email": "stephen.hendricks87@gmail.com",
+      "url": "https://stephenhendricks.me/"
+    }
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "floating-vue": "^2.0.0-beta.20",
+    "json-tree-view-vue3": "^0.2.2",
+    "pinia": "^2.0.28",
+    "splitpanes": "^3.1.5",
+    "vue": "^3.2.45",
+    "vue-monaco-cdn": "^2.0.3",
+    "vue3-clipboard": "^1.0.0",
+    "vue3-toastify": "0.0.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "sass": "^1.57.1",
+    "vite": "^4.0.0"
+  }
+}

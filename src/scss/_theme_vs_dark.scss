@@ -1,0 +1,34 @@
+.vs-dark {
+  --text-color: #a2a2a3;
+  --header-background-color: #1b1b1b;
+
+  // svg icons
+  --icon-fill-color: #555;
+  --icon-active-fill-color: #ddd;
+
+  // buttons
+  --button-background-color: #151515;
+  --button-border-color: #1f1f1f;
+  --button-text-color: #bbb;
+  --button-hover-background-color: black;
+  --button-hover-text-color: white;
+
+  // split panes
+  --left-pane-background-color: #1f1f1f;
+  --right-pane-background-color: #151515;
+  --divider-grabber-background-color: #ebebeb26;
+
+  // select dropdowns
+  --select-color: white;
+  --select-option-color: #a2a2a3;
+  --select-option-background-color: #1b1b1b;
+
+  // tooltip
+  --tooltip-background-color: white;
+  --tooltip-text-color: black;
+
+  // tabs
+  --tab-border-color: #151515;
+  --tab-color: #a2a2a3;
+  --tab-active-color: #fefefe;
+}

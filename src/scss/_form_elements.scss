@@ -1,0 +1,26 @@
+select {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: none;
+  background-color: rgba(125,125,125,0.15);
+  font-size: 1rem;
+  -webkit-appearance: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color,background-color .2s ease;
+  padding: 0;
+  border: 0;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

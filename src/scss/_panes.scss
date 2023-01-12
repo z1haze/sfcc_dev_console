@@ -1,0 +1,26 @@
+@import "splitpanes/dist/splitpanes.css";
+
+.splitpanes {
+  max-height: calc(100% - 60px);
+}
+.default-theme.splitpanes--vertical>.splitpanes__splitter,
+.default-theme .splitpanes--vertical>.splitpanes__splitter {
+  width: 1rem;
+}
+
+.default-theme.splitpanes--horizontal>.splitpanes__splitter,
+.default-theme .splitpanes--horizontal>.splitpanes__splitter {
+  height: 1rem;
+}
+
+.right-pane {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+
+  pre {
+    font-family: "Droid Sans Mono", monospace, "Droid Sans Fallback";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    font-feature-settings: "liga", "calt";
+  }
+}

@@ -1,0 +1,23 @@
+header {
+  height: var(--header-height);
+
+  // logo link
+  a {
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    img.logo {
+      padding-right: 12px;
+    }
+  }
+
+  // header buttons
+  .layout-selector button {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 100%;
+    }
+  }
+}

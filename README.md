@@ -15,8 +15,9 @@ Dev Console
 Installation
 ---
 
-1. Install/upload Cartridge
-2. Add `sfcc_dev_console` to Business Manager Storefront `Cartridges` Path
+1. Create a new cartridge folder in your codebase called `sfcc_dev_console`. (If you already have a previous version of this cartridge installed, it would be best to delete your existing `sfcc_dev_console` directory and start over).
+2. Copy the `cartridge` folder from this repo into your `sfcc_dev_console` directory and upload the cartridge to your instance.
+3. Add `sfcc_dev_console` to Business Manager Storefront `Cartridges` Path
 3. Once installed, you can access the Dev Console on your sandbox at `/on/demandware.store/YOUR_SITE_ID/default/Console-Show` ( change `YOUR_SITE_ID` to your Site ID, e.g. `Sites-Site` ).
 
 Business Manager
@@ -24,7 +25,7 @@ Business Manager
 
 To make use of the Dev Console in the context of the Business Manager (jobs, business manager modules) do the following:
 
-1. Add `sfcc_developers_core` to project or global `.gitignore`
+1. Add `sfcc_dev_console` to project or global .gitignore
 2. Add `sfcc_dev_console` to the Business Manager `Cartridges` Path, do the following actions to accomplish this:
     * `Administration`
     * `Manage Sites`
@@ -71,6 +72,10 @@ You may need to temporarily switch Code Versions, then switch back to trigger th
 
 In order for this link to work you need to follow the Storefront installation steps.
 
+#### I am getting errors when trying to run code through the dev console.
+
+You may need to clear your browsers localStorage due to data structure changes with the new tabs feature.
+
 Sandbox Security
 ---
 
@@ -85,8 +90,3 @@ If you wish to lock down your sandbox, SFCC already provides a solution to prote
 5. Enter a `Password` and click `Apply`
 
 Once this is set up, anytime you login to your storefront from a new browser, you will need to enter the username `storefront` and the password you just created. Your login info will be saved as long as you do not clear your browser's cookies. The Chrome plugin [Demandware with Ease](https://chrome.google.com/webstore/detail/demandware-with-ease/ffhabonelknmejmdnekedmijlhebpcio) provides the ability to automatically login with a Storefront Password.
-
-Disclaimer
----
-
-> The trademarks and product names of Salesforce®, including the mark Salesforce®, are the property of Salesforce.com. SFCC DevOps is not affiliated with Salesforce.com, nor does Salesforce.com sponsor or endorse the SFCC DevOps products or website. The use of the Salesforce® trademark on this project does not indicate an endorsement, recommendation, or business relationship between Salesforce.com and SFCC DevOps.

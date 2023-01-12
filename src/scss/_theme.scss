@@ -1,0 +1,130 @@
+body {
+  color: var(--text-color);
+  background-color: var(--right-pane-background-color);
+}
+
+select {
+  color: var(--select-color);
+
+  option {
+    color: var(--select-option-color);
+    background-color: var(--select-option-background-color);
+  }
+}
+
+header {
+  background-color: var(--header-background-color);
+
+  a {
+    color: var(--text-color);
+  }
+
+  // layout switcher
+  .layout-switch {
+    svg path {
+      fill: var(--icon-fill-color);
+    }
+
+    &:hover,
+    &.active {
+      svg path {
+        fill: var(--icon-active-fill-color);
+      }
+    }
+  }
+}
+
+// editor button actions
+.editor-actions {
+  .btn {
+    color: var(--button-text-color);
+    border-color: var(--button-border-color);
+    background-color: var(--button-background-color);
+
+    &:hover {
+      color: var(--button-hover-text-color);
+      background-color: var(--button-hover-background-color);
+    }
+  }
+
+  .tabs {
+    background-color: var(--header-background-color);
+
+    .tab {
+      background-color: var(--header-background-color);
+
+      &.active {
+        border-color: var(--tab-border-color);
+
+        button {
+          color: var(--tab-active-color);
+        }
+      }
+
+      button,
+      +button {
+        color: var(--tab-color);
+      }
+
+      +button:hover {
+        color: var(--tab-active-color);
+      }
+
+      +button {
+        background-color: var(--tab-new-button-background-color);
+      }
+
+      &.active {
+        background-color: var(--left-pane-background-color);
+      }
+    }
+  }
+}
+
+// split panes
+.default-theme.splitpanes--horizontal>.splitpanes__splitter,
+.default-theme .splitpanes--horizontal>.splitpanes__splitter,
+.default-theme.splitpanes--vertical>.splitpanes__splitter,
+.default-theme .splitpanes--vertical>.splitpanes__splitter {
+  background-color: var(--header-background-color);
+  border-color: var(--header-background-color);
+
+  &:before,
+  &:after {
+    background-color: var(--divider-grabber-background-color);
+  }
+}
+
+.splitpanes.default-theme .splitpanes__pane {
+  &.left-pane {
+    background-color: var(--left-pane-background-color);
+  }
+
+  &.right-pane {
+    background-color: var(--right-pane-background-color);
+  }
+}
+
+// code editor
+.editor {
+  .monaco-editor {
+    .margin {
+      background-color: var(--header-background-color);
+    }
+  }
+}
+
+.monaco-editor .margin {
+  background-color: var(--header-background-color);
+}
+
+// tooltips
+.v-popper--theme-tooltip .v-popper__inner {
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-text-color);
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-inner,
+.v-popper--theme-tooltip .v-popper__arrow-outer{
+  border-color: var(--tooltip-background-color);
+}
