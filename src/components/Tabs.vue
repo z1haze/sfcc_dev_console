@@ -1,6 +1,8 @@
 <script setup>
 import {storeToRefs} from 'pinia';
 import {useDefaultStore} from '../stores.js';
+import ConfirmDialog from './ConfirmDialog.vue';
+import { createConfirmDialog } from 'vuejs-confirm-dialog';
 
 const store = useDefaultStore();
 
@@ -8,17 +10,28 @@ store.loadTabs();
 
 const {tabs, activeTab} = storeToRefs(store);
 
+const { reveal, onConfirm } = createConfirmDialog(ConfirmDialog);
+
 const selectTab = (i) => {
   activeTab.value = i;
   localStorage.setItem('activeTab', i);
 }
 
 const removeTab = (i) => {
-  if (i >= 1) {
-    selectTab(i-1)
+  if (i === 0) {
+    return;
+  }
+
+  onConfirm(() => {
+    if (i <= activeTab.value) {
+      selectTab(activeTab.value - 1);
+    }
+
     tabs.value.splice(i, 1);
     saveTabs();
-  }
+  });
+
+  reveal();
 };
 
 const addNewTab = () => {

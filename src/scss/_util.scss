@@ -38,6 +38,10 @@
   justify-content: center;
 }
 
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 .flex-grow-1 {
   flex-grow: 1;
 }
@@ -88,6 +92,9 @@
 /**
  * Margin Classes
  */
+.ml-3 {
+  margin-left: 1rem;
+}
 .mr-2 {
   margin-right: .5rem;
 }

@@ -1,0 +1,85 @@
+.dialog-mask {
+  --maskbg: rgba(0, 0, 0, 0.4);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--maskbg);
+  transition-duration: 0.2s;
+
+  &.dialog-mask-enter {
+    animation: overlay-enter-animation 150ms forwards;
+
+    .dialog {
+      animation: scale-up 150ms forwards;
+    }
+  }
+}
+
+.dialog {
+  max-height: 90%;
+  transform: scale(1);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  border: 0 none;
+  background-color: var(--header-background-color);
+  transition: transform 1s ease;
+
+  .dialog-header {
+    padding: 1.5rem 1.5rem 1.75rem;
+
+    span {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    i {
+      color: var(--button-text-color);
+    }
+  }
+
+  .dialog-content {
+    padding: 0 1.5rem 2rem 1.5rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .dialog-footer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+
+    .btn {
+      padding: 0.75rem 1.25rem;
+      color: var(--button-text-color);
+      background-color: var(--button-background-color);
+      border-radius: 6px;
+      transition: all .2s ease;
+
+      &:hover {
+        color: var(--button-hover-text-color);
+        background-color: var(--button-hover-background-color);
+      }
+    }
+  }
+}
+
+@keyframes overlay-enter-animation {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--maskbg);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -88,4 +88,6 @@ window.addEventListener('resize', () => windowWidth.value = document.body.client
       </div>
     </pane>
   </splitpanes>
+
+  <DialogsWrapper />
 </template>

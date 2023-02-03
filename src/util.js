@@ -28,11 +28,11 @@ export const checkForUpdate = async () => {
     const response = await fetch(url)
         .then((r) => r.json());
 
-    const latestVersion = response.name;
-    const currentVersion = __APP_VERSION__;
+    const latestVersion = response.name.replace(/\D/g, '');
+    const currentVersion = __APP_VERSION__.replace(/\D/g, '');
 
-    if (parseFloat(latestVersion) > parseFloat(currentVersion)) {
-        showMessage('info', `Update Available ( ${latestVersion} )`, () => window.open(url));
+    if (parseInt(latestVersion) > parseInt(currentVersion)) {
+        showMessage('info', `Update Available ( ${response.name} )`, () => window.open(url));
     }
 
     localStorage.setItem('lastUpdateCheck', new Date().getTime().toString());

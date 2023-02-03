@@ -1,7 +1,7 @@
 {
   "name": "sfcc_dev_console",
   "private": true,
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A Salesforce Commerce Cloud (Demandware) Cartridge for Developers.",
   "type": "module",
   "contributors": [
@@ -24,7 +24,8 @@
     "vue": "^3.2.45",
     "vue-monaco-cdn": "^2.0.3",
     "vue3-clipboard": "^1.0.0",
-    "vue3-toastify": "0.0.4"
+    "vue3-toastify": "0.0.4",
+    "vuejs-confirm-dialog": "^0.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
