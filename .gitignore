@@ -1,3 +1,5 @@
 .idea/
 node_modules/
 dist/
+dw.json
+cartridge/static/default/index.html

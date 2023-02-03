@@ -13,7 +13,7 @@ import {checkForUpdate, showMessage} from './util.js';
 import {useDefaultStore} from './stores.js';
 
 const store = useDefaultStore();
-const {theme, layout, plainJSON, getJSON, result} = storeToRefs(store);
+const {theme, layout, plainJSON, getResultJSON, result, logs, getLogsJSON} = storeToRefs(store);
 
 const lpane = ref(localStorage.getItem('lpane') || 50);
 const rpane = ref(localStorage.getItem('rpane') || 50);
@@ -81,11 +81,33 @@ window.addEventListener('resize', () => windowWidth.value = document.body.client
       <editor-actions-right/>
 
       <!-- Output -->
-      <div class="output p-2" v-if="result">
-        <pre v-if="plainJSON" ref="outputPlain">{{ getJSON }}</pre>
-        <JsonTreeView v-else :data="getJSON" :max-depth="10" root-key="result"
-                      :color-scheme="theme === 'vs' ? 'light' : 'dark'"/>
-      </div>
+      <template v-if="result">
+        <div class="output">
+          <template v-if="plainJSON">
+            <template v-if="logs.length">
+              <div class="p-2" v-if="logs.length"><pre>{{getLogsJSON}}</pre></div>
+              <hr>
+            </template>
+            <div class="p-2"><pre>{{ getResultJSON }}</pre></div>
+          </template>
+
+          <template v-else>
+            <template v-if="logs.length">
+              <div class="p-2">
+                <JsonTreeView :data="getLogsJSON" :max-depth="10" root-key="logs"
+                              :color-scheme="theme === 'vs' ? 'light' : 'dark'"/>
+              </div>
+
+              <hr>
+            </template>
+
+            <div class="p-2">
+              <JsonTreeView :data="getResultJSON" :max-depth="10" root-key="result"
+                            :color-scheme="theme === 'vs' ? 'light' : 'dark'"/>
+            </div>
+          </template>
+        </div>
+      </template>
     </pane>
   </splitpanes>
 

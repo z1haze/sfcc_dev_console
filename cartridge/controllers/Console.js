@@ -83,10 +83,11 @@ function Run() {
 
     var result;
     var startTime = new Date();
+    var logs = new dw.util.ArrayList();
 
     try {
-        var myFunc = new Function('code', code);
-        result = myFunc();
+        var myFunc = new Function('log', code);
+        result = myFunc((arg) => logs.add(arg));
     } catch (e) {
         result = e;
     }
@@ -95,12 +96,13 @@ function Run() {
 
     var serializer = require('../scripts/serializer');
     result = serializer.serialize(result, maxDepth);
+    logs = serializer.serialize(logs, maxDepth);
 
     if (typeof result === 'string' || typeof result === 'boolean' || typeof result === 'number') {
-        return sendJSON({result: [result], executionTime: runtime});
+        return sendJSON({logs: logs, result: [result], executionTime: runtime});
     }
 
-    sendJSON({result: result || {}, executionTime: runtime});
+    sendJSON({logs: logs, result: result || {}, executionTime: runtime});
 }
 
 /**

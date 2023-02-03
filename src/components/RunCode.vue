@@ -10,7 +10,7 @@ import {runCode, showMessage} from '../util.js';
 import {useDefaultStore} from '../stores.js';
 
 const store = useDefaultStore();
-const {result, executionTime, layout, tabs, activeTab, editor} = storeToRefs(store);
+const {result, executionTime, logs, layout, tabs, activeTab, editor} = storeToRefs(store);
 const processing = ref(false);
 
 const run = async () => {
@@ -28,6 +28,7 @@ const run = async () => {
     if (response) {
       result.value = response.result;
       executionTime.value = response.executionTime || 1;
+      logs.value = response.logs;
 
       if (layout.value !== 'split') {
         layout.value = 'split';

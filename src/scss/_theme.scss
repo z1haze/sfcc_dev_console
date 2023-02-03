@@ -128,3 +128,18 @@ header {
 .v-popper--theme-tooltip .v-popper__arrow-outer{
   border-color: var(--tooltip-background-color);
 }
+
+hr {
+  border-color: var(--header-background-color);
+  height: 2px;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--left-pane-background-color);
+    position: absolute;
+    bottom: 0;
+  }
+}

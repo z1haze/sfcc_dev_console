@@ -8,9 +8,13 @@ Dev Console
 ## Features
 
 - [X] Execute Server Side JavaScript on your Sandbox in your favorite browser
+- [X] Adds a global `log` method to allow logging without your code
 - [X] No Site Preferences or Misc Imports Required, just drop in and go
 - [X] Safety Measures to prevent running in Production Environments
 - [X] Menu in the Business Manager (with role management)
+
+Example use of the `log` feature build into the dev console
+![log-example.png](documentation/log-example.png)
 
 Installation
 ---
@@ -53,6 +57,7 @@ Use cases
 
 * Execute code using your storefront session
 * View objects from the current customer session
+* Iterate through objects and use the global `log` method to print those logs to the console
 
 ### Business Manager
 

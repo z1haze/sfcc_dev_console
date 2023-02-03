@@ -6,7 +6,7 @@ import {TOOLTIP_DELAY} from '../constants.js';
 import {useDefaultStore} from '../stores.js';
 
 const store = useDefaultStore();
-const {result, getJSON} = storeToRefs(store);
+const {result, getResultJSON} = storeToRefs(store);
 const copied = ref(false);
 const copyError = ref(false);
 
@@ -45,7 +45,7 @@ const clipboardErrorHandler = (err) => {
 
 <template>
   <button class="btn" :disabled="!result"
-          v-clipboard:copy="getJSON"
+          v-clipboard:copy="getResultJSON"
           v-clipboard:success="clipboardSuccessHandler"
           v-clipboard:error="clipboardErrorHandler"
           v-tooltip="{ content: 'Copy to Clipboard', delay: { show: TOOLTIP_DELAY } }">

@@ -6,6 +6,7 @@ export const useDefaultStore = defineStore('default', {
         theme: localStorage.getItem('theme') || 'vs-dark',
         editor: null,
         executionTime: null,
+        logs: [],
         result: null,
         plainJSON: localStorage.getItem('plainJSON') === 'true',
         tabs: [{label: 'get session', value: 'return session'}, {label: 'get customer', value: 'return customer'}],
@@ -13,7 +14,8 @@ export const useDefaultStore = defineStore('default', {
     }),
 
     getters: {
-        getJSON: (state) => JSON.stringify(state.result, null, 2)
+        getResultJSON: (state) => JSON.stringify(state.result, null, 2),
+        getLogsJSON: (state) => JSON.stringify(state.logs, null, 2)
     },
 
     actions: {
