@@ -21,7 +21,7 @@ const rpane = ref(localStorage.getItem('rpane') || 50);
 const lastUpdateCheck = localStorage.getItem('lastUpdateCheck');
 
 // Check for updates no more than once a week
-if (false && !lastUpdateCheck || (new Date().getTime()) - parseInt(lastUpdateCheck) > 604800000) {
+if (!lastUpdateCheck || (new Date().getTime()) - parseInt(lastUpdateCheck) > 604800000) {
   checkForUpdate()
       .catch((e) => showMessage('error', e.message));
 }
