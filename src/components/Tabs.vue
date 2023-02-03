@@ -10,28 +10,28 @@ store.loadTabs();
 
 const {tabs, activeTab} = storeToRefs(store);
 
-const { reveal, onConfirm } = createConfirmDialog(ConfirmDialog);
+const dialog  = createConfirmDialog(ConfirmDialog);
 
 const selectTab = (i) => {
   activeTab.value = i;
   localStorage.setItem('activeTab', i);
 }
 
-const removeTab = (i) => {
+const removeTab = async (i) => {
   if (i === 0) {
     return;
   }
 
-  onConfirm(() => {
-    if (i <= activeTab.value) {
-      selectTab(activeTab.value - 1);
-    }
+  const {isCanceled } = await dialog.reveal();
 
-    tabs.value.splice(i, 1);
-    saveTabs();
-  });
+  if (isCanceled) return;
 
-  reveal();
+  if (i <= activeTab.value) {
+    selectTab(activeTab.value - 1);
+  }
+
+  tabs.value.splice(i, 1);
+  saveTabs();
 };
 
 const addNewTab = () => {
