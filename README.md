@@ -13,7 +13,7 @@ Dev Console
 - [X] Safety Measures to prevent running in Production Environments
 - [X] Menu in the Business Manager (with role management)
 
-Example use of the `log` feature build into the dev console
+Example use of the `log` feature built into the dev console
 ![log-example.png](documentation/log-example.png)
 
 Installation
