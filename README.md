@@ -8,7 +8,7 @@ Dev Console
 ## Features
 
 - [X] Execute Server Side JavaScript on your Sandbox in your favorite browser
-- [X] Adds a global `log` method to allow logging without your code
+- [X] Adds a global `log` method to allow logging within the dev console
 - [X] No Site Preferences or Misc Imports Required, just drop in and go
 - [X] Safety Measures to prevent running in Production Environments
 - [X] Menu in the Business Manager (with role management)
