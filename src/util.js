@@ -24,10 +24,11 @@ export const showMessage = (type, content, callback = null) => {
 };
 
 export const checkForUpdate = async () => {
-    const url = 'https://github.com/z1haze/sfcc_dev_console/releases/latest';
-    const response = await fetch(url);
+    const url = 'https://api.github.com/repos/z1haze/sfcc_dev_console/releases/latest';
+    const response = await fetch(url)
+        .then((r) => r.json());
 
-    const latestVersion = response.url.split('/').pop();
+    const latestVersion = response.name;
     const currentVersion = __APP_VERSION__;
 
     if (parseFloat(latestVersion) > parseFloat(currentVersion)) {
