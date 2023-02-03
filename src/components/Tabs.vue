@@ -8,10 +8,14 @@ store.loadTabs();
 
 const {tabs, activeTab} = storeToRefs(store);
 
-const saveTabs = () => localStorage.setItem('tabs', JSON.stringify(tabs.value));
+const selectTab = (i) => {
+  activeTab.value = i;
+  localStorage.setItem('activeTab', i);
+}
 
 const removeTab = (i) => {
-  if (tabs.value.length > 1) {
+  if (i >= 1) {
+    selectTab(i-1)
     tabs.value.splice(i, 1);
     saveTabs();
   }
@@ -19,6 +23,7 @@ const removeTab = (i) => {
 
 const addNewTab = () => {
   tabs.value.push({label: 'new tab', value: ''});
+  selectTab(tabs.value.length - 1);
   saveTabs();
 };
 
@@ -27,10 +32,7 @@ const updateLabel = (text, i) => {
   saveTabs();
 };
 
-const selectTab = (i) => {
-  activeTab.value = i;
-  localStorage.setItem('activeTab', i);
-}
+const saveTabs = () => localStorage.setItem('tabs', JSON.stringify(tabs.value));
 </script>
 
 <template>
