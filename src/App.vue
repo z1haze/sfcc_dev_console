@@ -68,7 +68,7 @@ window.addEventListener('resize', () => windowWidth.value = document.body.client
   <app-header/>
 
   <splitpanes :horizontal="windowWidth <= 768" class="default-theme" @resize="onResizePanes">
-    <pane v-if="lpane > 0" min-size="25" :size="lpane" class="left-pane d-flex flex-column">
+    <pane :size="lpane" class="left-pane d-flex flex-column">
       <!-- Editor Actions Left -->
       <editor-actions-left/>
 
@@ -76,7 +76,7 @@ window.addEventListener('resize', () => windowWidth.value = document.body.client
       <editor/>
     </pane>
 
-    <pane v-if="rpane > 0" min-size="25" :size="rpane" class="right-pane d-flex flex-column">
+    <pane :size="rpane" class="right-pane d-flex flex-column">
       <!-- Editor Actions Left -->
       <editor-actions-right/>
 
