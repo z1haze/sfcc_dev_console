@@ -2,4 +2,4 @@
 node_modules/
 dist/
 dw.json
-cartridge/static/default/index.html
+cartridges/sfcc_dev_console/cartridge/static/default/index.html

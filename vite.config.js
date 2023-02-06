@@ -6,7 +6,7 @@ export default defineConfig({
   root: 'src',
   plugins: [vue()],
   build: {
-    outDir: '../cartridge/static/default',
+    outDir: '../cartridges/sfcc_dev_console/cartridge/static/default',
     emptyOutDir: false,
     rollupOptions: {
       output: {
