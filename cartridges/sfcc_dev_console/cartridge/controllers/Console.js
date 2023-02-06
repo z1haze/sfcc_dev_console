@@ -87,7 +87,7 @@ function Run() {
 
     try {
         var myFunc = new Function('log', code);
-        result = myFunc((arg) => logs.add(arg));
+        result = myFunc(function(arg) {logs.add(arg)});
     } catch (e) {
         result = e;
     }
