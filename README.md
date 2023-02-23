@@ -21,10 +21,13 @@ Installation
 
 [![Download](https://img.shields.io/badge/Download-blue.svg?logo=github&style=for-the-badge)](https://github.com/z1haze/sfcc_dev_console/releases/latest)
 
-1. Create a new cartridge folder in your codebase called `sfcc_dev_console`. (If you already have a previous version of this cartridge installed, it would be best to delete your existing `sfcc_dev_console` directory and start over).
-2. Copy the `cartridges` folder from this repo into your `sfcc_dev_console` directory and upload the cartridge to your instance.
-3. Add `sfcc_dev_console` to Business Manager Storefront `Cartridges` Path
-3. Once installed, you can access the Dev Console on your sandbox at `/on/demandware.store/YOUR_SITE_ID/default/Console-Show` ( change `YOUR_SITE_ID` to your Site ID, e.g. `Sites-Site` ).
+1. If you still have this cartridge included from `sfcc_developers_core`, you will need to delete it from `sfcc_developers_core/cartridges/sfcc_dev_console`.
+2. Download the release zip.
+3. Extract the zip contents and rename the folder to just read `sfcc_dev_console` (excluding the `-#.#.#` version)
+4. Delete everything inside the directory `sfcc_dev_console` except for the `cartridges` folder.
+5. Move the entire remaining contents to your project root so that your folder structure looks as `%project_root%/sfcc_dev_console/cartridges`
+6. Add `sfcc_dev_console` to Business Manager Storefront `Cartridges` Path
+7. Once installed, you can access the Dev Console on your sandbox at `/on/demandware.store/YOUR_SITE_ID/default/Console-Show` ( change `YOUR_SITE_ID` to your Site ID, e.g. `Sites-Site` ).
 
 Business Manager
 ---
