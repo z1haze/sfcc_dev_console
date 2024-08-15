@@ -75,7 +75,7 @@ function serialize (original, maxDepth, depth, pojo) {
 
     // what we have left is an object (hopefully)
     // convert and return the object
-    return serializeObject(original, maxDepth, depth, pojo || {});
+    return serializeObject(original, maxDepth, depth);
 }
 
 /**
@@ -84,10 +84,11 @@ function serialize (original, maxDepth, depth, pojo) {
  * @param object
  * @param maxDepth
  * @param depth
- * @param pojo
  * @returns {*}
  */
-function serializeObject (object, maxDepth, depth, pojo) {
+function serializeObject (object, maxDepth, depth) {
+    const newPojo = {}; // Create a new POJO for each object serialization
+
     for (let prop in object) {
         // have to do this because dw has some invalid properties on objects - very weird
         let k = null;
@@ -102,11 +103,6 @@ function serializeObject (object, maxDepth, depth, pojo) {
             continue;
         }
 
-        /**
-         * For some reason SFCC applies the custom properties on certain object types that
-         * it really shouldn't, and when trying to process those custom fields, it blows up.
-         * This helps is to get around that by skipping them under certain scenarios.
-         */
         if (object instanceof dw.order.PaymentProcessor && prop === 'custom') {
             continue;
         }
@@ -115,10 +111,10 @@ function serializeObject (object, maxDepth, depth, pojo) {
             continue;
         }
 
-        pojo[prop] = serialize(k, maxDepth, depth + 1, {});
+        newPojo[prop] = serialize(k, maxDepth, depth + 1);
     }
 
-    return pojo;
+    return newPojo;
 }
 
 /**
